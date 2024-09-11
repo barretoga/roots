@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
-import { FaBluesky } from "react-icons/fa6";
 
 export default function Home() {
   return (

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 export default function ThreeBackground() {
-  const mountRef: any = useRef(null);
+  const mountRef = useRef<HTMLDivElement | null>(null);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,9 @@ export default function ThreeBackground() {
 
       const renderer = new THREE.WebGLRenderer({ alpha: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      mountRef.current.appendChild(renderer.domElement);
+      if (mountRef.current) {
+        mountRef.current.appendChild(renderer.domElement);
+      }
 
       const ambientLight = new THREE.AmbientLight(0x404040, 2);
       scene.add(ambientLight);

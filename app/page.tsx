@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import ThreeBackground from "@/components/threeBackground";
 
 export default function Home() {
@@ -26,19 +26,14 @@ export default function Home() {
             priority
           />
         </motion.div>
-        <motion.div
-          className="flex flex-col gap-3 items-center justify-center w-full"
-        >
+        <motion.div className="flex flex-col gap-3 items-center justify-center w-full">
           <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <Button
               className="hover:cursor-pointer w-64 p-6"
               type="button"
               asChild
             >
-              <Link
-                href="https://barretoga.netlify.app/"
-                target="_blank"
-              >
+              <Link href="https://gasparelo.dev/" target="_blank">
                 Portfolio
               </Link>
             </Button>
@@ -49,10 +44,7 @@ export default function Home() {
               type="button"
               asChild
             >
-              <Link
-                href="https://barretodev.vercel.app/"
-                target="_blank"
-              >
+              <Link href="https://blog.gasparelo.dev/" target="_blank">
                 Blog
               </Link>
             </Button>
@@ -63,10 +55,7 @@ export default function Home() {
               type="button"
               asChild
             >
-              <Link
-                href="https://github.com/barretoga"
-                target="_blank"
-              >
+              <Link href="https://github.com/barretoga" target="_blank">
                 Github
               </Link>
             </Button>
@@ -91,57 +80,72 @@ export default function Home() {
               type="button"
               asChild
             >
-              <Link
-                href="https://dev.to/barretoga"
-                target="_blank"
-              >
+              <Link href="https://dev.to/barretoga" target="_blank">
                 Dev.to
               </Link>
             </Button>
           </motion.div>
           <div className="flex gap-x-2">
             <motion.div
-              whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               className="bg-primary rounded-md w-[48px] h-[48px] flex items-center justify-center"
             >
-              <Link
-                href="https://bsky.app/profile/barretoga.bsky.social"
-                target="_blank"
-              >
-                <img src="/brand-bluesky.png" width={36} height={36} className="filter invert brightness-0" />
+              <Link href="https://x.com/kkjbarreto" target="_blank">
+                <img
+                  src="/xwitter.svg"
+                  width={36}
+                  height={36}
+                  className="filter invert brightness-0"
+                />
               </Link>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               className="bg-primary rounded-md w-[48px] h-[48px] flex items-center justify-center"
             >
-              <Link
-                href="https://letterboxd.com/kkjbarreto/"
-                target="_blank"
-              >
-                <img src="/brand-letterboxd.png" width={36} height={36} className="filter invert brightness-0" />
+              <Link href="https://letterboxd.com/kkjbarreto/" target="_blank">
+                <img
+                  src="/brand-letterboxd.png"
+                  width={36}
+                  height={36}
+                  className="filter invert brightness-0"
+                />
               </Link>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               className="bg-primary rounded-md w-[48px] h-[48px] flex items-center justify-center"
             >
               <Link
                 href="https://www.instagram.com/barreto_ga/"
                 target="_blank"
               >
-                <img src="/brand-instagram.png" width={36} height={36} className="filter invert brightness-0" />
+                <img
+                  src="/brand-instagram.png"
+                  width={36}
+                  height={36}
+                  className="filter invert brightness-0"
+                />
               </Link>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               className="bg-primary rounded-md w-[48px] h-[48px] flex items-center justify-center"
             >
               <Link
                 href="https://myanimelist.net/profile/kkjbarreto"
                 target="_blank"
               >
-                <img src="/mal.png" width={36} height={36} className="filter invert brightness-0" />
+                <img
+                  src="/mal.png"
+                  width={36}
+                  height={36}
+                  className="filter invert brightness-0"
+                />
               </Link>
             </motion.div>
           </div>

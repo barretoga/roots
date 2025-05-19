@@ -112,7 +112,7 @@ export default function ThreeBackground() {
     const graphGroup = graphGroupRef.current;
     const linesToRemove: number[] = [];
 
-    linesRef.current.forEach((lineObj, index) => {
+    linesRef.current.forEach((lineObj) => {
       if (lineObj.progress < 1) {
         lineObj.progress += 0.005;
 
@@ -257,7 +257,7 @@ export default function ThreeBackground() {
 
     const nodes: THREE.Mesh[] = [];
 
-    let nodesToAdd = maxNodesToAdd;
+    const nodesToAdd = maxNodesToAdd;
     let nodesAdded = 0;
 
     const intervalId = setInterval(() => {

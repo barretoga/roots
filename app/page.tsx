@@ -92,7 +92,8 @@ export default function Home() {
               className="bg-primary rounded-md w-[48px] h-[48px] flex items-center justify-center"
             >
               <Link href="https://x.com/kkjbarreto" target="_blank">
-                <img
+                <Image
+                  alt="twitter"
                   src="/xwitter.svg"
                   width={36}
                   height={36}
@@ -106,7 +107,8 @@ export default function Home() {
               className="bg-primary rounded-md w-[48px] h-[48px] flex items-center justify-center"
             >
               <Link href="https://letterboxd.com/kkjbarreto/" target="_blank">
-                <img
+                <Image
+                  alt="letterboxd"
                   src="/brand-letterboxd.png"
                   width={36}
                   height={36}
@@ -123,7 +125,8 @@ export default function Home() {
                 href="https://www.instagram.com/barreto_ga/"
                 target="_blank"
               >
-                <img
+                <Image
+                  alt="instagram"
                   src="/brand-instagram.png"
                   width={36}
                   height={36}
@@ -140,7 +143,8 @@ export default function Home() {
                 href="https://myanimelist.net/profile/kkjbarreto"
                 target="_blank"
               >
-                <img
+                <Image
+                  alt="myanimelist"
                   src="/mal.png"
                   width={36}
                   height={36}

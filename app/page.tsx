@@ -7,15 +7,25 @@ import { Button } from "@/components/ui/button";
 import ThreeBackground from "@/components/threeBackground";
 
 export default function Home() {
+  const linkItems: { name: string; link: string }[] = [
+    { name: "Portfolio", link: "https://gasparelo.dev/" },
+    { name: "Blog", link: "https://blog.gasparelo.dev/" },
+    { name: "Github", link: "https://github.com/barretoga" },
+    {
+      name: "Linkedin",
+      link: "https://www.linkedin.com/in/gabrielbarretogasparelo/",
+    },
+    { name: "Dev.to", link: "https://dev.to/barretoga" },
+  ];
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <ThreeBackground />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <motion.div
           className="mx-auto"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
         >
           <Image
             className="dark:invert rounded-full mx-auto border-2"
@@ -27,64 +37,20 @@ export default function Home() {
           />
         </motion.div>
         <motion.div className="flex flex-col gap-3 items-center justify-center w-full">
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Button
-              className="hover:cursor-pointer w-64 p-6"
-              type="button"
-              asChild
-            >
-              <Link href="https://gasparelo.dev/" target="_blank">
-                Portfolio
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Button
-              className="hover:cursor-pointer w-64 p-6"
-              type="button"
-              asChild
-            >
-              <Link href="https://blog.gasparelo.dev/" target="_blank">
-                Blog
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Button
-              className="hover:cursor-pointer w-64 p-6"
-              type="button"
-              asChild
-            >
-              <Link href="https://github.com/barretoga" target="_blank">
-                Github
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Button
-              className="hover:cursor-pointer w-64 p-6"
-              type="button"
-              asChild
-            >
-              <Link
-                href="https://www.linkedin.com/in/gabrielbarretogasparelo/"
-                target="_blank"
+          {linkItems.map((item) => (
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+              <Button
+                className="hover:cursor-pointer w-64 p-6"
+                type="button"
+                asChild
               >
-                Linkedin
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Button
-              className="hover:cursor-pointer w-64 p-6"
-              type="button"
-              asChild
-            >
-              <Link href="https://dev.to/barretoga" target="_blank">
-                Dev.to
-              </Link>
-            </Button>
-          </motion.div>
+                <Link href={item.link} target="_blank">
+                  {item.name}
+                </Link>
+              </Button>
+            </motion.div>
+          ))}
+
           <div className="flex gap-x-2">
             <motion.div
               whileHover={{ scale: 1.2 }}

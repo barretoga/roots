@@ -38,7 +38,11 @@ export default function Home() {
         </motion.div>
         <motion.div className="flex flex-col gap-3 items-center justify-center w-full">
           {linkItems.map((item) => (
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+            <motion.div
+              key={item.name}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
+            >
               <Button
                 className="hover:cursor-pointer w-64 p-6"
                 type="button"
